@@ -10,78 +10,84 @@
 </head>
 
 <body>
-    <nav class="bg-green-100 p-4 flex justify-between shadow-xl items-center sticky top-0 z-50">
+    <nav class="bg-green-100 p-4 flex justify-between shadow-xl items-center sticky top-0 z-20">
 
         <h1> GREENDEN</h1>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 lg:hidden md:hidden">
+            class="w-6 h-6 lg:hidden md:hidden cursor-pointer" id="menubar">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5 " />
         </svg>
 
         <ul class="flex gap-5 hidden md:flex text-gray-600">
             <a href="index.html" target="_blank" class="hover:underline cursor-pointer hover:text-black">Home</a>
-            <a href="product.html"  target="_blank" class="hover:underline cursor-pointer hover:text-black">Product</a>
+            <a href="product.html" target="_blank" class="hover:underline cursor-pointer hover:text-black">Product</a>
             <a href="contact.html" target="_blank" class="hover:underline cursor-pointer hover:text-black">Contact</a>
         </ul>
     </nav>
-    <section class="p-4 mr-2">
-        <h1 class="text-3xl font-bold mt-5 text-center"> Best Seller </h1>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-8 text-center ">
-            <div class="mb-4 mr-2">
-                <img src="./images/bestseller-1.png" alt=""
-                    class="hover:shadow-2xl transform hover:-translate-y-3 inline">
-                <h1> Rose plant</h1>
-                <p>$20</p>
-            </div>
-            <div class="mb-4 mr-2">
-                <img src="./images/bestseller-2.png" alt=""
-                    class="hover:shadow-2xl transform hover:-translate-y-3 inline">
-                <h1> Kora plant</h1>
-                <p>$20</p>
-            </div>
-            <div class="mb-4 mr-2">
-                <img src="./images/bestseller-3.png" alt=""
-                    class="hover:shadow-2xl transform hover:-translate-y-3 inline">
-                <h1> Mera plant</h1>
-                <p>$20</p>
-            </div>
-            <div class="mb-4 mr-2">
-                <img src="./images/bestseller-4.png" alt=""
-                    class="hover:shadow-2xl transform hover:-translate-y-3 inline">
-                <h1>Zora plant</h1>
-                <p>$20</p>
-            </div>
-
+    <section class="text-center flex flex-col gap-4 items-center mt-12">
+        <h1 class="text-3xl font-bold">Our Products</h1>
+        <input type="text" class="border border-black w-10/12 p-2" id="search">
+        <button class="bg-black text-white p-2 ">Search</button>
+    </section>
+    <!--Side navbar-->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000"
+        style="width: 50%; height: 100vh; right: -50%;">
+        <div class="text-right">
+            <p class="p-5 cursor-pointer" id="close-nav">X</p>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-8 text-center ">
-            <div class="mb-4 mr-2">
-                <img src="./images/Untitled design (1).png" alt=""
-                    class="hover:shadow-2xl transform hover:-translate-y-3 inline">
-                <h1> Rose plant</h1>
-                <p>$20</p>
-            </div>
-            <div class="mb-4 mr-2">
-                <img src="./images/Untitled design (2).png" alt=""
-                    class="hover:shadow-2xl transform hover:-translate-y-3 inline">
-                <h1> Kora plant</h1>
-                <p>$20</p>
-            </div>
-            <div class="mb-4 mr-2">
-                <img src="./images/Untitled design (3).png" alt=""
-                    class="hover:shadow-2xl transform hover:-translate-y-3 inline">
-                <h1> Mera plant</h1>
-                <p>$20</p>
-            </div>
-            <div class="mb-4 mr-2">
-                <img src="./images/Untitled design (4).png" alt=""
-                    class="hover:shadow-2xl transform hover:-translate-y-3 inline">
-                <h1>Zora plant</h1>
-                <p>$20</p>
-            </div>
+        <ul class="flex flex-col gap-10 items-center md:flex text-gray-600">
+            <a href="index.html" target="_blank" class="hover:underline cursor-pointer hover:text-black">Home</a>
+            <a href="product.html" target="_blank" class="hover:underline cursor-pointer hover:text-black">Product</a>
+            <a href="contact.html" target="_blank" class="hover:underline cursor-pointer hover:text-black">Contact</a>
+        </ul>
 
+    </section>
+    <section class="p-4 mr-2 grid grid-cols-2 md:grid-cols-4 mt-8 text-center " id="productcontainer">
+
+        <div class="mb-4 mr-2">
+            <img src="./images/bestseller-1.png" alt="" class="hover:shadow-2xl transform hover:-translate-y-3 inline">
+            <h1> Rose plant</h1>
+            <p>$20</p>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-8 text-center ">
+        <div class="mb-4 mr-2">
+            <img src="./images/bestseller-2.png" alt="" class="hover:shadow-2xl transform hover:-translate-y-3 inline">
+            <h1> Kora plant</h1>
+            <p>$20</p>
+        </div>
+        <div class="mb-4 mr-2">
+            <img src="./images/bestseller-3.png" alt="" class="hover:shadow-2xl transform hover:-translate-y-3 inline">
+            <h1> Mera plant</h1>
+            <p>$20</p>
+        </div>
+        <div class="mb-4 mr-2">
+            <img src="./images/bestseller-4.png" alt="" class="hover:shadow-2xl transform hover:-translate-y-3 inline">
+            <h1>Zora plant</h1>
+            <p>$20</p>
+        </div>
+        <div class="mb-4 mr-2">
+            <img src="./images/Untitled design (1).png" alt=""
+                class="hover:shadow-2xl transform hover:-translate-y-3 inline">
+            <h1> Rose plant</h1>
+            <p>$20</p>
+        </div>
+        <div class="mb-4 mr-2">
+            <img src="./images/Untitled design (2).png" alt=""
+                class="hover:shadow-2xl transform hover:-translate-y-3 inline">
+            <h1> Kora plant</h1>
+            <p>$20</p>
+        </div>
+        <div class="mb-4 mr-2">
+            <img src="./images/Untitled design (3).png" alt=""
+                class="hover:shadow-2xl transform hover:-translate-y-3 inline">
+            <h1> Mera plant</h1>
+            <p>$20</p>
+        </div>
+        <div class="mb-4 mr-2">
+            <img src="./images/Untitled design (4).png" alt=""
+                class="hover:shadow-2xl transform hover:-translate-y-3 inline">
+            <h1>Zora plant</h1>
+            <p>$20</p>
+        </div>
             <div class="mb-4 mr-2">
                 <img src="./images/Untitled design (5).png" alt=""
                     class="hover:shadow-2xl transform hover:-translate-y-3 inline">
@@ -106,6 +112,7 @@
                 <h1>Zora plant</h1>
                 <p>$20</p>
             </div>
+
     </section>
     <section class="p-4 bg-green-100 flex flex-col gap-4 mt-4">
         <h1 class="text-3xl font-bold">Greenden</h1>
@@ -113,7 +120,7 @@
         <p>@2021 Greeday.com</p>
 
     </section>
-
+    <script src="product.js"></script>
 </body>
 
 </html>
